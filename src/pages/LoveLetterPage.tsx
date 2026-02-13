@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import FloatingHearts from "@/components/FloatingHearts";
 
-const letterSections = [
+const letterSectionss = [
   { type: "en", text: "My Janani," },
   { type: "en", text: "I don't know the exact moment I fell in love with you.\nMaybe it was your smile.\nMaybe it was the way you talk.\nMaybe it was the comfort I feel when I'm with you." },
   { type: "en", text: "But somewhere between our conversations and laughter…\nyou became my favorite person." },
@@ -21,6 +21,70 @@ const letterSections = [
   { type: "en", text: "If loving you is a journey,\nI never want it to end." },
   { type: "sign", text: "Forever yours,\nGokul ❤️" },
 ];
+
+
+const letterSections =[
+  { type: "ta", text: "Adiyae," },
+  { 
+    type: "ta", 
+    text: "Happy Valentine’s Day di Butti ❤️" 
+  },
+
+  { 
+    type: "ta", 
+    text: "Unna first time paathadhula irundhu, en life konjam konjam ah maari pochu. Ordinary ah irundha days ellam, ippo konjam special ah feel aagudhu…" 
+  },
+{type:'en',
+  text:'reason nee dhaan.'
+},
+  { 
+    type: "ta", 
+    text: "Un kitta nalla pesina aprm enakku oru calm feeling varudhu. Evlo tension irundhaalum, un voice ketta podhum, konjam light ah feel panren." 
+  },
+
+  { 
+    type: "ta", 
+    text: "Un sirippu… adhu enakku romba pidikkum." 
+  },
+{type:'en',
+  text:"Seri ah sollanum na, un sirippu dhaan en weak point."
+},
+  { 
+    type: "ta", 
+    text: "Nee en lover nu sollradhu simple word dhaan. Aana nee adha vida adhigam — nee en en daily happiness." 
+  },
+
+  {type:'en',text:'Ne en best friend, en support system ah irukanumnu nenaikuren'},
+  { 
+    type: "ta", 
+    text: "Naan perfect illa. Konjam stubborn ah iruppen, konjam overthink pannuven. Aana oru vishayam clear — unna pathi en feelings romba genuine." 
+  },
+
+  { 
+    type: "ta", 
+    text: "Naan un kooda serious ah future pathi yosikaren." 
+  },
+
+  { 
+    type: "ta", 
+    text: "Intha Valentine’s Day la naan solla varadhu simple dhaan: Un kooda irukka enakku romba pidikkum. Unna love panradhu enakku proud." 
+  },
+{type:"en",text:"Unna lose panna enakku bayam"},
+  { 
+    type: "ta", 
+    text: "Life la evlo ups and downs vandhaalum, sandhoshathukum kashtathukum naan un side la dhaan iruppen." 
+  },
+
+  { 
+    type: "ta", 
+    text: "Thanks di… en life ku vandhadhukku. Nee irukradhala dhaan en world complete ah feel aagudhu." 
+  },
+
+  { type: "en", text: "Love you always ❤️" },
+
+  { type: "sign", text: "Forever yours,\nGokul ❤️" }
+]
+
 
 const LoveLetterPage = () => {
   const navigate = useNavigate();
@@ -57,7 +121,7 @@ const LoveLetterPage = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.05 }}
             >
-              {section.type === "ta" ? (
+              {section.type === "en" ? (
                 <p className="font-display italic text-primary text-lg sm:text-xl text-center py-2">
                   {section.text}
                 </p>

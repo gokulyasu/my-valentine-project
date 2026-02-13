@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/button";
 import FloatingHearts from "@/components/FloatingHearts";
 
 const spotifyTracks = [
-  "https://open.spotify.com/embed/track/3d9DChrdc6BOeFsbrZ3Is0",
-  "https://open.spotify.com/embed/track/7qiZfU4dY1lWllzX7mPBI3",
-  "https://open.spotify.com/embed/track/1zi7xx7UVEFkmKfv06H8x0",
-  "https://open.spotify.com/embed/track/0u2P5u6lvoDfwTYjAADbn4",
+  "https://open.spotify.com/embed/track/65dvxc4Kctq3JIJ2BkKKMj",
+  "https://open.spotify.com/embed/track/5kB7KZOIhr8G2CJMouGOa0",
+  "https://open.spotify.com/embed/track/5p0EV9zCL2PDbRciPXFCw1",
+  "https://open.spotify.com/embed/track/5RP7NIFbpQHqPLTe5dpxet",
+  "https://open.spotify.com/embed/track/4vlMdXsRpAIXYggwbNHZSv",
+  "https://open.spotify.com/embed/track/45THyhjDbYhNU7bDrTTUK6",
 ];
 
 const musicNotes = ["🎵", "🎶", "🎼", "💗", "🎧", "🩷"];
@@ -17,7 +19,7 @@ const SongsPage = () => {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Floating music notes */}
+    
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         {Array.from({ length: 10 }).map((_, i) => (
           <span
@@ -64,7 +66,7 @@ const SongsPage = () => {
                 <iframe
                   src={`${url}?theme=0`}
                   width="100%"
-                  height="152"
+                  height="300"
                   frameBorder="0"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"

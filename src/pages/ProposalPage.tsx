@@ -6,14 +6,15 @@ import FloatingHearts from "@/components/FloatingHearts";
 import { Button } from "@/components/ui/button";
 
 const noMessages = [
-  "Error 404: 'No' does not exist in our love story 😌",
-  "Are you sure? My heart is fragile, you know 🥺",
+  
+  "Solra pecha mattum kekkavae mattala ne? 🥺💔",
+  "Unnala mutinja alavuku try panniko, kadasila yes tha solli aaganum 😌",
   "Careful… pressing No might break the universe 💔😂",
+  "Mooditu yes ah aluthu 💖",
+  "Ne No nu nenaukalaam. But, Athuku vaaipu illa 🥺",
   "Nice try… but fate already chose Yes 😏",
-  "That button is just for decoration 💖",
   "No ah? Idhu namma kathaila irukkave koodathu 😌",
   "Nope! Try again 🙈💕",
-  "My heart just did a sad flip 🥺💔",
 ];
 
 const ProposalPage = () => {
@@ -73,13 +74,15 @@ const ProposalPage = () => {
               >
                 💍
               </motion.div>
-
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4 leading-tight">
-                Janani… if love had a destiny, it led me to you.
+                Janani
+              </h1>
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-4 leading-tight">
+                If love had a destiny, it led me to you.
               </h1>
 
               <p className="text-muted-foreground italic text-lg mb-2">
-                "En vazhkaiyil vandha azhagana varam nee than"
+                "Unaku vera vali illa, yes tha solli aaganum"
               </p>
 
               <p className="text-xl text-foreground mt-6 mb-8">

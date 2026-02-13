@@ -1,14 +1,54 @@
 import { motion } from "framer-motion";
 import FloatingHearts from "@/components/FloatingHearts";
+import img001 from '../assets/001.jpg'
+import img002 from '../assets/002.jpg'
+import img003 from '../assets/003.jpg'
+
+import img004 from '../assets/004.jpg'
+
+import img005 from '../assets/005.jpg'
+
+import img006 from '../assets/006.jpg'
+
+import img007 from '../assets/007.jpg'
+
+import img008 from '../assets/008.jpg'
+
+import img009 from '../assets/009.jpg'
+
+import img010 from '../assets/010.jpg'
+
+import img011 from '../assets/011.jpg'
+
+import img012 from '../assets/012.jpg'
+
+import img013 from '../assets/013.jpg'
+
+
+
+
+
 
 const placeholderPhotos = [
-  { id: 1, caption: "The beginning of us 💖" },
-  { id: 2, caption: "Your smile, my weakness 😊" },
-  { id: 3, caption: "Adventures together 🌟" },
-  { id: 4, caption: "Our happiest moments 💕" },
-  { id: 5, caption: "Forever my favorite 🩷" },
-  { id: 6, caption: "Love looks like this ❤️" },
+
+{ id: 1, caption: "The beginning of us 💖", src: img001 },
+{ id: 2, caption: "Your smile, my weakness 😊", src: img002 },
+{ id: 3, caption: "Every adventure is better with you 🌟", src: img003 },
+{ id: 4, caption: "Our happiest little moments 💕", src: img004 },
+{ id: 5, caption: "My forever favorite person 🩷", src: img005 },
+{ id: 6, caption: "Love looks like this — you ❤️", src: img006 },
+{ id: 8, caption: "A memory I’ll keep forever ✨", src: img008 },
+{ id: 9, caption: "You make ordinary days beautiful 🌼", src: img009 },
+{ id: 10, caption: "Your presence feels like home 🏡❤️", src: img010 },
+{ id: 11, caption: "Moments like these are priceless 💫", src: img011 },
+{ id: 13, caption: "With you, life feels magical ✨💖", src: img013 },
+
 ];
+
+
+// { id: 7, caption: "Love looks like this ❤️",  src: img007 },
+
+// { id: 12, caption: "Love looks like this ❤️",  src: img012 },
 
 const MemoriesPage = () => {
   return (
@@ -43,9 +83,63 @@ const MemoriesPage = () => {
             >
               <div className="bg-card border border-border rounded-lg shadow-md overflow-hidden p-3 pb-6">
                 {/* Polaroid-style placeholder */}
-                <div className="aspect-square bg-muted rounded flex items-center justify-center">
-                  <span className="text-5xl">📷</span>
-                </div>
+                {/* <div className="aspect-square bg-muted rounded flex items-center justify-center">
+                                                                                                                                                                                                                                                                                                                                                                          <span className="text-5xl">📷</span>
+                                                                                                                                                                                                                                                                                                                                                                                          </div> */}
+
+                {photo.src ? (
+                  <img
+                    src={photo.src}
+                    alt={photo.caption}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-muted">
+                    <span className="text-5xl">📷</span>
+                  </div>
+                )}
+
+
+                {/* {photo.src ? (
+                                                                                                                                                                                                                                                                                                                                                                                                                                                             <>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   <img
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                           src={photo.src.replace(/&amp;/g, "&")}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   alt={photo.caption}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           className="w-full h-full object-cover"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <img
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               src={(photo.hoverSrc || photo.src).replace(/&amp;/g, "&")}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       alt={`${photo.caption} (hover)`}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ) : (
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               <div className="w-full h-full flex items-center justify-center">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     <span className="text-5xl">📷</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           )} */}
+
+                {/* <motion.img
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 src={photo.src?.replace(/&amp;/g, "&")}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     alt={photo.caption}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         className="inset-0 w-full h-full object-cover"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             initial={{ opacity: 1, scale: 1 }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 whileHover={{ opacity: 0, scale: 1.05 }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     transition={{ duration: 0.3, ease: "easeOut" }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       />
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         <motion.img
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             src={(photo.hoverSrc || photo.src)?.replace(/&amp;/g, "&")}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 alt={`${photo.caption} (hover)`}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     className="absolute inset-0 w-full h-full object-cover"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         initial={{ opacity: 0, scale: 1 }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             whileHover={{ opacity: 1, scale: 1 }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 transition={{ duration: 0.3, ease: "easeOut" }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   /> */}
+
+
+
                 <p className="text-center text-foreground font-medium mt-3 text-sm">
                   {photo.caption}
                 </p>
